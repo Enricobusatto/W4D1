@@ -119,4 +119,4 @@ const jobs = [
       location: "US, NY, Saint Bonaventure",
     },
   ]
-  /*
+*/
