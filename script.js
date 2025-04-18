@@ -172,3 +172,21 @@ const jobs = [
         resultBox.innerHTML = "Nessun lavoro trovato per il titolo inserito.";
       }
     }
+    function locationTitleSearch() {
+      let location = document.getElementById("location").value;
+      let title = document.getElementById("title").value;
+      let resultBox = document.getElementById("result3");
+      let result = [];
+    
+      for (let i = 0; i < jobs.length; i++) {
+        if (jobs[i].location.toLowerCase().includes(location.toLowerCase()) && jobs[i].title.toLowerCase().includes(title.toLowerCase())) {
+          result.push(jobs[i]);
+        }
+      }
+    
+      if (result.length > 0) {
+        resultBox.innerHTML = "<ol>" + result.map(job => `<li>${job.title} - ${job.location}</li>`).join('') + "</ol>";
+      } else {
+        resultBox.innerHTML = "Nessun lavoro trovato per la località e il titolo inseriti.";
+      }
+    }
