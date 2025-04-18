@@ -30,9 +30,8 @@ Dopo aver raccolto ed elaborato i dati, e’ il momento di mostrare i risultati 
     Puoi scegliere tu se utilizzare un semplice ul / li oppure una tabella 
     Vai passo per passo e usa molti console.log per capire eventualmente dove sbagli
     SUGGERIMENTO: ti servira’ un ciclo for!
+*/
 
-
- NON MODIFICARE QUESTO ARRAY!
 const jobs = [
     { title: "Marketing Intern", location: "US, NY, New York" },
     {
@@ -119,4 +118,57 @@ const jobs = [
       location: "US, NY, Saint Bonaventure",
     },
   ]
-*/
+/*
+  let resultLocation = [];
+  function locationSearch() { 
+    let location = document.getElementById("location").value;
+    for (let i = 0; i < jobs.length; i++) {
+      if (jobs[i].location.toLowerCase().includes(location.toLowerCase())) 
+        resultLocation.push(jobs[i].title);
+      }}
+    console.log(resultLocation);
+  
+  let resultTitle = [];
+  function titleSearch() {
+    let title = document.getElementById("title").value;
+    for (let i = 0; i < jobs.length; i++) {
+      if (jobs[i].title.toLowerCase().includes(title.toLowerCase())) 
+        resultTitle.push(jobs[i].location);
+      }}
+    console.log(resultTitle);
+    */
+
+    function locationSearch() {
+      let location = document.getElementById("location").value;
+      let resultBox = document.getElementById("result1");
+      let result = [];
+    
+      for (let i = 0; i < jobs.length; i++) {
+        if (jobs[i].location.toLowerCase().includes(location.toLowerCase())) {
+          result.push(jobs[i].title);
+        }
+      }
+    
+      if (result.length > 0) {
+        resultBox.innerHTML = "<ol>" + result.map(title => `<li>${title}</li>`).join('') + "</ol>";
+      } else {
+        resultBox.innerHTML = "Nessun lavoro trovato per la località inserita.";
+      }
+    }
+    function titleSearch() {
+      let title = document.getElementById("title").value;
+      let resultBox = document.getElementById("result2");
+      let result = [];
+    
+      for (let i = 0; i < jobs.length; i++) {
+        if (jobs[i].title.toLowerCase().includes(title.toLowerCase())) {
+          result.push(jobs[i].location);
+        }
+      }
+    
+      if (result.length > 0) {
+        resultBox.innerHTML = "<ol>" + result.map(location => `<li>${location}</li>`).join('') + "</ol>";
+      } else {
+        resultBox.innerHTML = "Nessun lavoro trovato per il titolo inserito.";
+      }
+    }

@@ -9,7 +9,20 @@
 </head>
 <body>
     <h1>ESERCIZIO W4D1</h1>
+    <h2>Ricerca Lavoro</h2>
     
-    
+    <input type="text" id="location" placeholder="Inserisci una località">
+    <button onclick="locationSearch()" id="pulsante1">Filtra Per Località</button>
+    <input type="text" id="title" placeholder="Inserisci Una Professione">
+    <button onclick="titleSearch()" id="pulsante2">Filtra Per Professione</button>
+    <h3>Risultati</h3>
+    <div style="display: flex; align-items: center;">
+        <div id="tot" style="border: 2px solid black; width: 720px; height: 320px;"></div>
+         <div id="result1" style="border: 2px solid black; width: 350px; height: 300px;margin-left: -715px;overflow-y: auto;"></div>
+         <div id="result2" style="border: 2px solid black; width: 350px; height: 300px;overflow-y: auto;"></div>
+
+
+    </div>
+
 </body>
 </html>
