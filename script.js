@@ -152,7 +152,7 @@ const jobs = [
       if (result.length > 0) {
         resultBox.innerHTML = "<ol>" + result.map(title => `<li>${title}</li>`).join('') + "</ol>";
       } else {
-        resultBox.innerHTML = "Nessun lavoro trovato per la località inserita.";
+        resultBox.innerHTML = "<p style='text-align: center; padding: 20px;'> Nessun lavoro trovato per la località inserita.";
       }
     }
     function titleSearch() {
@@ -169,7 +169,7 @@ const jobs = [
       if (result.length > 0) {
         resultBox.innerHTML = "<ol>" + result.map(location => `<li>${location}</li>`).join('') + "</ol>";
       } else {
-        resultBox.innerHTML = "Nessun lavoro trovato per il titolo inserito.";
+        resultBox.innerHTML = "<p style='text-align: center; padding: 20px;'> Nessun lavoro trovato per il titolo inserito.";
       }
     }
     function locationTitleSearch() {
@@ -187,6 +187,6 @@ const jobs = [
       if (result.length > 0) {
         resultBox.innerHTML = "<ol>" + result.map(job => `<li>${job.title} - ${job.location}</li>`).join('') + "</ol>";
       } else {
-        resultBox.innerHTML = "Nessun lavoro trovato per la località e il titolo inseriti.";
+        resultBox.innerHTML = "<p style='text-align: center; padding: 20px;'>Nessun lavoro trovato per la località e il titolo inseriti.";
       }
     }

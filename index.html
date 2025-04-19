@@ -8,27 +8,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h2>ESERCIZIO W4D1</h2>
+    <h3>ESERCIZIO W4D1</h3>
     <h1 style="text-align: center;">Ricerca Lavoro</h1>
     <div style="display: flex;align-items: anchor-center;justify-content: space-around;">
         <div>
-            <input type="text" id="location" placeholder="Inserisci una località">
-            <button onclick="locationSearch()" id="pulsante1">Filtra Per Località</button>
+            <input style="border-radius: 10px;padding: 5px;" type="text" id="location" placeholder="Inserisci una località">
+            <button style="background-color:#3498db; border-radius: 10px;padding: 5px;cursor: pointer;" onmouseover="this.style.backgroundColor= 'green'" onmouseout="this.style.backgroundColor='#3498db'" onclick="locationSearch()" id="pulsante1">Filtra Per Località</button>
         </div>
         <div>
-            <input style="width: 155px;" type="text" id="title" placeholder="Inserisci Una Professione">
-            <button onclick="titleSearch()" id="pulsante2">Filtra Per Professione</button>    
+            <input style="border-radius: 10px; padding: 5px; width: 155px;" type="text" id="title" placeholder="Inserisci Una Professione">
+            <button style="background-color:#3498db; border-radius: 10px; padding: 5px;cursor: pointer;" onmouseover="this.style.backgroundColor= 'green'" onmouseout="this.style.backgroundColor='#3498db'" onclick="titleSearch()" id="pulsante2">Filtra Per Professione</button>    
         </div>
         <div>
-            <button style="width: 270px;" onclick="locationTitleSearch()" id="pulsante2">Filtra Per Entrambe</button>
+            <button style="background-color:#3498db; border-radius: 10px; padding: 5px; width: 270px;cursor: pointer;"onmouseover="this.style.backgroundColor= 'green'" onmouseout="this.style.backgroundColor='#3498db'" onclick="locationTitleSearch()" id="pulsante2">Filtra Per Entrambe</button>
         </div>
     </div>
     <br>
     <br>
     <div style="display: flex;align-items: anchor-center;justify-content: space-around;">
-            <div id="result1" style="border: 2px solid black; width: 350px; height: 300px;overflow-y: auto;"></div>
-            <div id="result2" style="border: 2px solid black; width: 350px; height: 300px; overflow-y: auto;"></div>
-            <div id="result3" style="border: 2px solid black; width: 350px; height: 300px;overflow-y: auto;"></div>
+            <div id="result1" style="border-radius: 20px;box-shadow: 0 4px 8px rgba(133, 132, 132, 0.5); border: 2px solid black; width: 350px; height: 300px;overflow-y: auto;"></div>
+            <div id="result2" style="border-radius: 20px;box-shadow: 0 4px 8px rgba(133, 132, 132, 0.5); border: 2px solid black; width: 350px; height: 300px; overflow-y: auto;"></div>
+            <div id="result3" style="border-radius: 20px;box-shadow: 0 4px 8px rgba(133, 132, 132, 0.5); border: 2px solid black; width: 350px; height: 300px;overflow-y: auto;"></div>
 
     </div>
 
